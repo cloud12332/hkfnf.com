@@ -1407,21 +1407,6 @@
   }, { threshold: 0.12 });
   reveals.forEach(r => observer.observe(r));
 
-  // Form submit
-  function handleSubmit(e) {
-    e.preventDefault();
-    const btn = e.target.querySelector('.form-submit');
-    btn.textContent = 'Sent ✓';
-    btn.style.background = '#4ade80';
-    btn.style.color = '#000';
-    setTimeout(() => {
-      btn.textContent = 'Send Message';
-      btn.style.background = '';
-      btn.style.color = '';
-      e.target.reset();
-    }, 3000);
-  }
-
   // Hover cursor effects
   document.querySelectorAll('a, button').forEach(el => {
     el.addEventListener('mouseenter', () => {
